@@ -694,9 +694,9 @@ void uvg_encoder_control_free(encoder_control_t *const encoder)
 
   uvg_threadqueue_free(encoder->threadqueue);
   encoder->threadqueue = NULL;
-  for (int i = 0; i < encoder->cfg.num_used_table; i++) {
-    if (encoder->qp_map[i]) FREE_POINTER(encoder->qp_map[i]);
-  }
+  // for (int i = 0; i < encoder->cfg.num_used_table; i++) {
+  //   if (encoder->qp_map[i]) FREE_POINTER(encoder->qp_map[i]);
+  // }
 
   uvg_close_rdcost_outfiles();
 
